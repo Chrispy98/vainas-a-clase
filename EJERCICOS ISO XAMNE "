@@ -1,0 +1,32 @@
+1.-) ESTANDO EN CSV_NUEVOS Y SIN MOVERNOS DE EL, MOSTRAR
+LOS FICHERPOS DE LA CARPETA ALUMNOSCURSO2021-22 EN CUYO NOMBRE
+APAREZCA VUESTRO NOMBRE ORDENADOS DE LA Z A LA A. RUTA RELATIVA
+
+    
+
+2.- ESTANDO EN VUESTRO DIRECTORIO HOME, Y SIN MOVERNOS DE EL:
+2.1- COPIAR TODOS LOS FICHEROS .CSV DE CSV-NUEVOS A LA CARPETA 
+     FONDOS. R.A.
+        cp /home/alumnotd/ies-canaveral/csv-nuevos/*.csv /home/alumnotd/ies-canaveral/almacen/fondos/
+
+2.2- COPIAR TODOS LOS FICHEROS DE LISTADOALUMNOS QUE TERMINEN
+     POOR UNA VOCAL A LA CARPETA ISO DE 1Âº ASIR-B. R.R
+        cp ies-canaveral/almacen/listado_alumnos/*[aeiou].* ies-canaveral/curso2021-22/gradosuperior/asir/primero/grupo-b/iso
+
+2.3- COPIAR EL FICHERO EMPLEADOS2017.TXT DE LA CARPETA
+     ALAMCEN/DATOS A LA CAREPTA ACTUAL. LLAMANDOLE 
+     EMPLEADOS2021.TXT. R.R
+        cp ies-canaveral/almacen/datos/empleados2017.txt ./empleados2021.txt
+
+2.4- COPIAR LA CARPETA ASIR CON TODO SU CONTENIDO A LA CARPETA
+     GRADOMEDIO. R.A.
+        cp -r /home/alumnotd/ies-canaveral/curso2021-22/gradosuperior/asir/ /home/alumnotd/ies-canaveral/curso2021-22/gradomedio/
+
+2.5- COPIAR TODOS LOS FICHEROS DE ALMACEN CUYA SEGUNDA LETRA 
+     SEA UNA VOCAL A LA CARPETA FCT DE 2Âº ASIR. R.A.
+        cp /home/alumnotd/ies-canaveral/almacen/?[aeiou]*.* /home/alumnotd/ies-canaveral/curso2021-22/gradosuperior/asir/segundo/fct
+
+2.6- COPIAR LOS FICHEROS DE fondos QUE empiezan por una l 
+     mÃ¡s los que terminan por un 0 a la carpeta ies-canaveral. 
+     R.R
+        cp ies-canaveral/almacen/fondos/l* ies-canaveral/almacen/fondos/*0.* ies-canaveral
