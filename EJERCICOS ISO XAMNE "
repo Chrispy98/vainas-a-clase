@@ -30,3 +30,21 @@ APAREZCA VUESTRO NOMBRE ORDENADOS DE LA Z A LA A. RUTA RELATIVA
      mÃ¡s los que terminan por un 0 a la carpeta ies-canaveral. 
      R.R
         cp ies-canaveral/almacen/fondos/l* ies-canaveral/almacen/fondos/*0.* ies-canaveral
+
+3.- ESTANDO EN ies-canaveral, Y SIN MOVERNOS DE EL:
+3.1- MOVER TODOS LOS FICHEROS QUE EMPIEZAN POR UNA C 
+     DE ALMACEN A LA CARPETA COMICS. R.A.
+        mv /home/alumnotd/ies-canaveral/almacen/C* /home/alumnotd/ies-canaveral/almacen/comics/
+
+
+3.2- MOVER LA CARPETA GA DENTRO DE GRADO SUPERIOR. R.A
+        mv /home/alumnotd/ies-canaveral/curso2021-22/gradomedio/ga /home/alumnotd/ies-canaveral/curso2021-22/gradosuperior/ 
+
+3.3- MOVER TODOS LOS FICHEROS DE LISTADOALUMNOS QUE EMPIEZAN POR UNA LETRA DE LA A A LA D A LA CARPETA ACTUAL. R.R
+        mv almacen/listado_alumnos/[a-dA-D]* .
+
+3.4- RENOMBRAR EL FICHERO DE LA CARPERA CSV-NUEVOS LLAMADO 
+     2018_Accidentalidad.xlsx POR PROBLEMAS2021.XLSX. R.R
+        mv csv-nuevos/2018_Accidentalidad.xlsx csv-nuevos/PROBLEMAS.2021.xlsx
+
+
