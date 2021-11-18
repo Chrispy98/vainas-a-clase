@@ -1,0 +1,306 @@
+
+    1. Estando en la carpeta â€œsegundoâ€ de â€œsmrâ€ y sin movernos de ella, ejecuta el comando para cambiar al directorio â€œalmacenâ€. Utilizar ruta relativa.
+
+cd ../../../../almacen/
+
+
+    2. Estando en la carpeta â€œcurso2021-22â€ y sin movernos de ella, ejecuta el comando que muestra en que carpeta estamos.
+
+pwd
+
+
+    3. Estando en la carpeta â€œcurso2021-22â€ y sin movernos de ella, ejecuta el comando que cambia el prompt de la terminal para que aparezca la hora actual en formato 24 horas, seguido de el carÃ¡cter â€œ\â€ seguido de un # si estamos como root o un $ en cualquier otro caso.
+
+PS1='\A\\\$'
+
+
+    4. Estando en la carpeta â€œasirâ€ de â€œgradosuperiorâ€ y sin movernos de ella, ejecuta el comando para ir a directorio ies-canaveral del usuario actual con el que estÃ¡s. Indica tres maneras de indicar la ruta para ir a dicha carpeta. Debes poner tres comandos, uno por cada ruta diferente.
+
+
+
+  cd /home/usuario/ies-canaveral/
+  cd ../../..
+  cd ~/ies-canaveral/
+
+
+    5. Estando en la carpeta â€œcomicsâ€ de â€œalmacenâ€ y sin movernos de ella, ejecuta el comando para crear con un solo comando y dentro de la carpeta â€œcsv_nuevosâ€ la siguiente estructura de directorios. Utilizar ruta relativa.
+
+
+mkdir -p ../../csv-nuevos/comandos/avanzados/parte1 ../../csv-nuevos/comandos/avanzados/parte2 ../../csv-nuevos/comandos/basicos/parte1 ../../csv-nuevos/comandos/basicos/parte2
+
+
+    6. Estando en la carpeta â€œcsv_nuevosâ€ y sin movernos de ella, ejecuta el comando para borrar la carpeta â€œfolâ€ de â€œprimeroâ€ de â€œcomercioâ€, sin utilizar el comando rm. Utilizar ruta relativa.
+
+rmdir ../curso2021-22/gradomedio/comercio/primero/grupo-a/fol/
+
+
+    7. Estando en la carpeta â€œgradomedioâ€ y sin movernos de ella, ejecuta el comando para crear dentro de la carpeta â€gaâ€ de â€œgradomedioâ€ tres carpetas (cada una dentro de la anterior) llamadas â€œunoâ€, dentro de uno â€œuno-unoâ€ y dentro de â€œuno-unoâ€ la carpeta â€œtres-unosâ€. Hacerlo en un solo comando. Utilizar ruta absoluta.
+
+mkdir -p ~/ies-canaveral/curso2021-22/gradomedio/ga/uno/uno-uno/tres-uno
+
+
+    8. Estando en la carpeta â€œgaâ€ de â€œgradomedioâ€ y sin movernos de ella, ejecuta el comando para borrar las tres carpetas â€œunoâ€, â€œuno-unoâ€ y â€œtres-unosâ€ creadas anteriormente. Utilizar un Ãºnico comando y no puede ser rm. Utilizar ruta relativa.
+
+rmdir -p uno/uno-uno/tres-uno/
+
+
+    9. Escribe el comando para buscar en la ayuda los manuales que contengan la palabra mount. Indica dos maneras de verlo
+
+
+
+	man -k mount
+     apropos mount
+
+
+
+    10. Estando en la carpeta â€œlistado_alumnosâ€ de â€œalmacenâ€ y sin movernos de ella, ejecuta el comando para crear 50 ficheros dentro de la carpeta â€œbÃ¡sicosâ€ de â€œcomandosâ€ de â€œcsv_nuevosâ€ que se llamen ayuda1.txt, ayuda2.txt, ayuda3.txtâ€¦, ayuda50.txt. Utilizar ruta absoluta.
+
+
+touch ~/ies-canaveral/csv-nuevos/comandos/basicos/ayuda{1..50}.txt
+
+
+
+    11. Estando en la carpeta â€œalmacenâ€ y sin movernos de ella, ejecuta el comando para crear dentro de â€œies-canaveralâ€ ficheros que se llamen fichero-a1.txt, fichero-a2.txt, fichero-a3.txtâ€¦, fichero-a10.txt, fichero-b1.txt, fichero-b2.txt, fichero-b3.txtâ€¦, fichero-b10.txt, fichero-c1.txt, fichero-c2.txt, fichero-c3.txtâ€¦, fichero-c10.txt, y asÃ­ hasta fichero-h1.txt, fichero-h2.txt, fichero-h3.txtâ€¦, fichero-h10.txt . Utilizar ruta relativa.
+
+
+ touch ../fichero-{a..h}{1..10}.txt
+
+
+
+
+    12. Estando en la carpeta â€œsegundoâ€ de â€œsmrâ€ y sin movernos de ella, ejecuta el comando para la fecha de Ãºltimo acceso del fichero ayuda25.txt que se encuentra en â€œcsv-nuevos/comandos/bÃ¡sicosâ€. Utilizar ruta relativa. 
+
+
+ls -lu ../../../../csv-nuevos/comandos/basicos/ayuda25.txt
+
+
+
+    13. Estando en la carpeta â€œcsv-nuevos/comandos/bÃ¡sicosâ€ y sin movernos de ella, ejecuta el comando para poner como fecha de Ãºltimo acceso al fichero â€œayuda25.txtâ€ el 23 de febrero de 2018 a las 15:30. Utilizar ruta relativa. Escribe el comando para ver que la fecha de Ãºltimo acceso efectivamente se ha cambiado
+
+
+
+touch -a -t 201802231530 ayuda25.txt 
+stat ayuda25.txt 
+
+
+
+
+    14. Escribe el comando para mostrar en que secciÃ³n del manual esta â€œmountâ€. Indica dos maneras de verlo.
+
+
+whatis mount
+   16  man -f mount
+
+
+    15. Estando en la carpeta â€œgradomedioâ€ y sin movernos de ella, ejecuta el comando para listar todos los ficheros de la carpeta csv-nuevos que empiezan por una â€œAâ€ o una â€œPâ€, mostrando la informaciÃ³n de manera detallada y ordenado por tamaÃ±o de menor a mayor y mostrando el tamaÃ±o en formato legible. Utilizar ruta absoluta.
+
+
+
+ls -lhSr ~/ies-canaveral/csv-nuevos/A* ~/ies-canaveral/csv-nuevos/P*
+ls -lhSr ~/ies-canaveral/csv-nuevos/[AP]*
+
+
+
+    16. Estando en la carpeta â€œsomâ€ de â€œgrupo-aâ€ de â€œprimeroâ€ de â€œsmrâ€ y sin movernos de ella, ejecuta el comando para mostrar todos los ficheros de la carpeta â€œlistado_alumnoâ€ que empiezan por â€œminiâ€ y que terminan por una â€œsâ€, con extensiÃ³n â€œtxtâ€, mostrando la informaciÃ³n ordenado por nombre en orden inverso (de la z a la a) y mostrando los ficheros ocultos. Utilizar ruta absoluta.
+
+
+
+ls -ar ~/ies-canaveral/almacen/listado_alumnos/mini*s.txt
+
+
+
+    17. Estando en la carpeta â€œinglesâ€ de â€œprimeroâ€ de â€œgaâ€ de â€œgradomedioâ€ y sin movernos de ella, ejecuta el comando para listar la informaciÃ³n detallada del directorio â€œcomandosâ€ de la carpeta â€œcsv_nuevosâ€ (no de su contenido), mostrando la fecha de creaciÃ³n. Utilizar ruta relativa.
+
+
+
+ls -ldu ../../../../../csv-nuevos/comandos/
+
+
+
+    18. Estando en la carpeta â€œfondosâ€ de â€œalmacenâ€ y sin movernos de ella, ejecuta el comando para listar todos los ficheros de la carpeta almacen y de todas sus subcarpetas que empiezan por una â€œcâ€. Utilizar ruta relativa.
+
+
+
+ls -R ../c*
+
+
+
+    19. Estando en la carpeta â€œies-canaveral y sin movernos de ella, ejecuta el comando para copiar la carpeta â€œsmr/segundoâ€ con todo su contenido dentro de la carpeta â€œcsv_nuevosâ€ (en la carpeta â€œcsv_nuevosâ€ debe aparecer la carpeta â€œsegundoâ€). Utilizar ruta absoluta.
+
+
+
+cp -r ~/ies-canaveral/curso2021-22/gradomedio/smr/segundo/ ~/ies-canaveral/csv-nuevos/
+
+
+    20. Estando en tu directorio home y sin movernos de Ã©l, ejecuta el comando para copiar todos los ficheros de la carpeta â€œlistado_alumnosâ€ cuya tercera letra sea una â€œtâ€ y con extensiÃ³n txt a la carpeta â€œgradomedio/comercioâ€ mostrando de forma detallada la copia. Utilizar ruta relativa.
+
+
+cp -v ies-canaveral/almacen/listado_alumnos/??t*.txt ies-canaveral/curso2021-22/gradomedio/comercio/
+
+
+
+    21. Estando en la carpeta â€œ/etcâ€ y sin movernos de ella, ejecuta el comando para copiar el fichero â€œNatalia.txtâ€ que estÃ¡ en â€œlistado_alumnosâ€ a la carpeta â€œgradomedio/comercioâ€ mostrando de forma detallada lo que copia y realizando la copia de forma interactiva (preguntando en caso de existir en destino el fichero). Utilizar ruta relativa.
+
+
+
+cp -vi ../home/usuario/ies-canaveral/almacen/listado_alumnos/Natalia.txt ../home/usuario/ies-canaveral/curso2021-22/gradomedio/comercio/
+
+
+
+    22. Estando en la carpeta â€œgrupo-câ€ de â€œprimeroâ€ de â€œsmrâ€ y sin movernos de ella, ejecuta el comando para copiar los ficheros de la carpeta â€œlistado_alumnosâ€ cuyo nombre empiezan por â€œPâ€ y cuya tercera letra es una â€œtâ€, con extensiÃ³n txt, a la carpeta â€œgradomedio/comercioâ€, y mostrando detalladamente el proceso de copia. Utilizar ruta absoluta.
+
+
+cp -v ~/ies-canaveral/almacen/listado_alumnos/P?t*.txt ~/ies-canaveral/curso2021-22/gradomedio/comercio/
+
+
+
+
+    23. Escribe el comando que nos muestra donde estÃ¡n los ficheros ejecutables, fuentes y manuales del comando grep
+
+
+whereis grep
+
+
+
+
+    24. Estando en la carpeta â€œinglesâ€ de â€œgrupo-aâ€ de â€œsegundoâ€ de â€œsmrâ€ y sin movernos de ella ejecuta el comando para cambiar el nombre de la carpeta â€œcomercioâ€ de â€œgradomedioâ€ para que se llame â€œcomercio-gmâ€. Utilizar ruta absoluta.
+
+
+mv ~/ies-canaveral/curso2021-22/gradomedio/comercio/ ~/ies-canaveral/curso2021-22/gradomedio/comercio-gm
+
+
+
+
+    25. Estando en la carpeta â€œcomercio-gmâ€ de â€œgradomedioâ€ y sin movernos de ella, ejecuta el comando para mover la carpeta â€œgaâ€ de â€œgradomedioâ€ a la carpeta â€œcsv-nuevosâ€. Utilizar ruta relativa.
+    
+    
+    
+    mv ../ga/ ../../../csv-nuevos/
+    
+
+    26. Estando en la carpeta â€œdamâ€ de â€œgradosuperiorâ€ y sin movernos de ella, ejecuta el comando para eliminar la carpeta de â€œgaâ€ que estÃ¡ en â€œcsv_nuevosâ€ con todo su contenido y sin pedir confirmaciÃ³n. Utilizar ruta absoluta.
+
+
+
+rm -rf ~/ies-canaveral/csv-nuevos/ga
+
+
+    27. Estando en la carpeta â€œdawâ€ de â€œgradosuperiorâ€ y sin movernos de ella, ejecuta el comando para borrar todos los ficheros de la carpeta â€œies-canaveralâ€ cuyo nombre termina por un 5 y con extensiÃ³n txt. Hacer el borrado interactivo. Utilizar ruta relativa.
+
+
+
+rm -i ../../../*5.txt
+
+
+
+    28. Ejecuta el comando para mostrar los 10 Ãºltimos comandos que has ejecutado
+
+
+
+history 10
+
+    29. Ejecuta el comando para ejecutar el antepenÃºltimo comando que tienes almacenado en el historial.
+
+
+!-3
+
+
+    30. Muestra el contenido de la variable PATH
+    
+    echo $PATH
+
+
+    31. AÃ±ade el directorio â€œalmacenâ€ al PATH
+
+
+PATH="$PATH:/home/usuario/ies-canaveral/almacen"
+
+    32. Crea una variable llamada â€œdiasemâ€ que contenga el dÃ­a de la semana en la que estamos.
+
+
+
+
+
+    33. Borra la variable que has creado â€œdiasemâ€
+
+
+
+
+    34. Estando en la carpeta â€œprimeroâ€ de â€œcom-intâ€ de â€œgradosuperiorâ€ y sin movernos de ella, ejecuta el comando para ver en forma de estructura de Ã¡rbol la carpeta â€œasirâ€ de â€œgradosuperiorâ€ mostrando Ãºnicamente las carpetas y su correspondiente ruta. Utilizar ruta absoluta.
+
+
+    35. Crea un alias llamado â€œ1a" que lo que haga es colocarse en la carpeta â€œgrupo-aâ€ de â€œprimeroâ€ de â€œsmrâ€.
+
+
+
+    36. Estando en la carpeta â€œsistemasâ€ de â€œgrupo-bâ€ de â€œprimeroâ€ de â€œdamâ€ y sin movernos de ella, ejecuta el comando para mostrar el contenido del fichero componentes.txt de la carpeta â€œalmacen/datosâ€ pantalla a pantalla. Indicar dos maneras de hacerlo. Utilizar ruta relativa.
+
+
+    37. Ejecuta el comando para que me genera 5 nÃºmeros aleatorias comprendidos entre 1 y 100.
+
+
+    38. Estando en la carpeta â€œdatosâ€ de â€œalmacenâ€ y sin movernos de ella, ejecuta el comando para mostrar las 5 primeras lÃ­neas del fichero â€œempleados2017.txtâ€ de la carpeta â€œalmacen/datosâ€. Utilizar ruta relativa.
+
+
+    39. Escribe el comando para que nos muestre donde se encuentra el comando ls
+
+    40. Escribe el comando que muestre en pantalla â€œHola soy AAA y estoy en el pc cuyo nombre es BBB y estamos a CCC del mes DDD y estamos en el aÃ±o EEE y son las FF:GG. Saludosâ€. No se permite poner valores fijos
+    â€¢ AAA. Es el nombre del usuario actual
+    â€¢ BBB. Es el nombre del equipo
+    â€¢ CCC. Es el dÃ­a de la semana en el que estamos
+    â€¢ DDD. Eses en el que estamos
+    â€¢ EEE. Es el aÃ±o en el que estamos
+    â€¢ FF:GG. Es la fecha y hora actuales
+
+
+
+    41. Estando en la carpeta â€œprimeroâ€ de â€œasirâ€ y sin movernos de ella, ejecuta el comando para mostrar las 15 Ãºltimas lÃ­neas del fichero â€œempleados2017.txtâ€ de la carpeta â€œalmacen/datosâ€. Utilizar ruta absoluta.
+
+
+    42. Escribe el comando que muestra el calendario del aÃ±o 2018
+
+
+    43. Estando en la carpeta â€œsegundoâ€ de â€œasirâ€ y sin movernos de ella, ejecuta el comando para mostrar todas las lÃ­neas del fichero â€œempleados2017.txtâ€ menos las 5 Ãºltimas de la carpeta â€œalmacen/datosâ€. Utilizar ruta relativa.
+
+
+    44. Estando en la carpeta â€œsegundoâ€ de â€œdawâ€ y sin movernos de ella, ejecuta el comando para el contenido de todos los ficheros de la carpeta â€œlistado_alumnosâ€ que empiezan por â€œbigâ€ y con extensiÃ³n txt. Utilizar ruta absoluta.
+
+
+    45. Estando en la carpeta â€œcsv_nuevosâ€ y sin movernos de ella, ejecuta el comando para ver el contenido del fichero â€œbig_Zacarias.txtâ€ que estÃ¡ en â€œlistado_alumnosâ€ pero mostrando el contenido al revÃ©s (desde la Ãºltima lÃ­nea a la primera). Utilizar ruta relativa.
+
+
+    46. Estando en la carpeta â€œies-canaveralâ€ y sin movernos de ella, ejecuta el comando para mostrar el fichero â€œlistado-nombres.txtâ€ de la carpeta â€œalmacenâ€ pero mostrando las lÃ­neas de manera aleatoria. Utilizar ruta absoluta.
+
+
+    47. Utilizando algÃºn comando de la consola realiza la siguiente operaciÃ³n ((3+3)*10)/5
+
+
+    48. Muestra la ayuda del comando grep de tres maneras diferentes
+
+
+
+
+
+    49. Estando en la carpeta â€œ/tmpâ€ y sin movernos de ella, ejecuta el comando para que muestre el contenido del fichero DIAS que estÃ¡ en â€œalmacenâ€ y si NO se ha mostrado correctamente mostrar el mensaje ERROR. Utilizar ruta relativa.
+
+
+
+    50. Estando en la carpeta raÃ­z del sistema y sin movernos de ella, ejecuta el comando para eliminar la carpeta â€œterceroâ€ que estÃ¡ en la carpeta â€œcsv_nuevosâ€ y en caso de haberse ejecutado correctamente dicha eliminaciÃ³n mostrar la estructura de carpeta de la carpeta â€œcsv_nuevosâ€ mostrando Ãºnicamente las carpetas. Utilizar ruta absoluta.
+    
+    
+    rm -f ~/ies-canaveral/csv-nuevos/tercero && tree -d ~/ies-canaveral/csv-nuevos/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
