@@ -328,13 +328,22 @@ cut -d'#' -f 17 ../../almacen/datos/empleados2017.txt| sort -t'#' -k1 -u
 6-)ESTANDO EN IES-CANAVERAL Y SIN MOVERNOS DE EL, MOSTRAR EL LOGIN DE LOS 9 ÃšLTIMOS 
 USUARIOS DADOS DE ALTA EN EL SISTEMA. R.R.
 
+cut -d':' -f1 ../../../etc/passwd | tail -n9
+
+
 7-)ESTANDO EN ALMACEN Y SIN MOVERNOS DE EL MOSTRAR EL NOMBRE Y SALARIO DE LOS 
 EMPLEADOS DEL EMPLEADOS2017.TXX, ORDENADOR POR SALARIO DE MENOR A MAYOR Y EN 
 CASO DE IGUALDAD POR NOMBRE DE MANERA DESCENDENTE. MOSTRAR EL RESULTADO EN 
 PANTALLA Y EN EL FICHERO LLAMADO ORDEN1.TXT DE LA CARPETA FONDOS. R.R.
 
+cut -d'#' -f 2,15 datos/empleados2017.txt| sort -t'#' -k2 -n -k1r | tee ../almacen/fondos/orden1.txt
+
+
+8-) Mostrar el espacio libre que teneis EN /DEV/SDA3. SOLO QUIERO EL ESPACIO
+
     
-    
+    df -h /dev/sda3 | cut -d' ' -f14
+
     
     
     
